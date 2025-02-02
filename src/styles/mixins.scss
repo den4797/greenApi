@@ -1,0 +1,37 @@
+@import "vars";
+
+@mixin button-submit() {
+  font-weight: 200;
+  font-size: 1rem;
+  border-radius: 25px;
+  background-color: $color--green;
+  color: $color--white;
+  border: none;
+  margin-top: 16px;
+  padding: 8px 24px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:active {
+    background-color: $color--green-light;
+  }
+
+  &:hover {
+    background-color: $color--green-light;
+  }
+}
+
+@mixin error--input-text {
+  width: max-content;
+  margin: 8px auto;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: $color--red-light;
+  color: $color--red;
+  animation: show 1s ease-in-out;
+}
+
+@keyframes show{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

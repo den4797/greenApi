@@ -1,0 +1,104 @@
+@import "src/styles/shared";
+
+.wrapper {
+  width: calc(100% - 38px);
+  max-width: 1600px;
+  min-height: calc(100vh - 38px);
+  height: calc(100vh - 38px);
+  margin: 19px auto;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #0b141a url(../../images/backgroundChat.png);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: auto;
+  gap: 4px;
+  font-size: 17px;
+  list-style-type: none;
+  padding: 0 63px 20px 63px;
+
+  @media (max-width: 560px) {
+    font-size: 14px;
+  }
+}
+
+.sendPanel {
+  min-height: 62px;
+  background-color: #202c33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 16px 5px 16px;
+}
+
+.sendButton {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+
+.item {
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  max-width: 45%;
+  position: relative;
+  overflow-wrap: break-word;
+  padding: 6px 7px 7px 9px;
+  color: $color--white;
+
+  @media (max-width: 560px) {
+    max-width: 50%;
+  }
+}
+
+.out {
+  background-color: $color--outgoing-background;
+  text-align: left;
+  align-self: flex-end;
+}
+
+.in {
+  background-color: $color--incoming-background;
+  color: $color--white;
+  align-self: flex-start;
+}
+
+.out:last-child::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  top: 0;
+  right: -8px;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid $color--outgoing-background;
+}
+
+.in:last-child::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  top: 0;
+  left: -8px;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid $color--incoming-background;
+}

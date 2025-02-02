@@ -1,0 +1,59 @@
+@import "src/styles/shared";
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Segoe UI", "Ubuntu",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 600;
+  color: $color--text;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: $color--green-light;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
+html {
+  height: 100vh;
+  min-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+input,
+textarea {
+  appearance: none;
+  border: none;
+  color: black;
+  line-height: normal !important;
+
+  &:focus {
+    outline: none;
+    transition: all 0.2s ease-in-out;
+
+    &::placeholder {
+      color: transparent;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

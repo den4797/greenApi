@@ -1,0 +1,39 @@
+@import "src/styles/shared";
+
+.header {
+  display: flex;
+  height: 64px;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: $color--panel-header-background;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.containerText {
+  margin-left: 15px;
+}
+
+.name {
+  color: $color--white;
+  font-weight: 400;
+}
+
+.time {
+  color: $color--text-gray;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.logoutButton {
+  margin-left: auto;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: $color--text-critical;
+  background-color: $color--background-gray;
+}
